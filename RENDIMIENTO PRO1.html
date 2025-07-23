@@ -1,0 +1,241 @@
+<!DOCTYPE html>  
+<html lang="es"> <!-- idioma  -->
+<head>
+    <meta charset="UTF-8"> <!-- tildes  -->
+    <title> Rendimiento Pro  </title>  <!--  titulo o nombre de la pagina -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        header {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/020/410/075/large_2x/3d-sport-rendering-background-for-a-sports-game-3d-illustration-realistic-abstract-backdrop-ball-object-copy-space-tennis-soccer-basketball-golf-rugby-volleyball-elements-neon-concept-design-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center; 
+        }
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .producto {
+            background-color: white;
+            width: 300px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .producto:hover {
+            transform: scale(1.03);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+        .boton-compra {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-compra:hover {
+            background-color: #219150;
+        }
+        .contacto {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .contacto a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .contacto a:hover {
+            color: #2980b9;
+        }
+
+        /* Estilos para ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-contenido {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: entrada 0.5s ease;
+        }
+        .popup-contenido img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .popup-contenido h2 {
+            margin: 0 0 10px 0;
+        }
+        .cerrar {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes entrada {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rendiminto Pro</h1>
+</header>
+
+<section class="contenedor">
+
+    <div class="producto">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.z2YKletxW8CCi2MoGd4UaQHaFS?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Balon de futbol">
+        <h2>Balón de futbol</h2>
+        <p><strong>Q350</strong></p>
+        <p>Balón adidas UEFA Champions League Final London 2024</p>
+        <button class="boton-compra" onclick="mostrarPopup('Balón Adidas UEFA Champions League 2024')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.qDRZDTd8qVyZ-MSC3XvC8gHaGB?w=800&h=650&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Zapatillas Nike Kobe">
+        <h2>Zapatillas Nike Kobe</h2>
+        <p><strong>Q690</strong></p>
+        <p>Zapatillas Nike Kobe 6 Protro x Grinch</p>
+        <button class="boton-compra" onclick="mostrarPopup('Zapatillas Nike Kobe 6 Protro x Grinch')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.hy4QZII05qovrY3c-cP-rwHaHa?w=760&h=760&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Balón de Baloncesto">
+        <h2>Balon de Baloncesto</h2>
+        <p><strong>Q700</strong></p>
+        <p>WILSON NBA TEAM TRIBUTE LAKERS</p>
+        <button class="boton-compra" onclick="mostrarPopup('WILSON NBA TEAM TRIBUTE LAKERS')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://th.bing.com/th/id/R.afadf879c594af34f1df5642beab4250?rik=T8pQPe6vYJeAjQ&pid=ImgRaw&r=0" alt="JORDAN HEADBAND">
+        <h2>HEADBAND JORDAN</h2>
+        <p><strong>Q250</strong></p>
+        <p>JORDAN JUMPMAN HEADBAND BLACK</p>
+        <button class="boton-compra" onclick="mostrarPopup('JORDAN JUMPMAN HEADBAND BLACK')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://m.media-amazon.com/images/I/41evB4TIvTL.jpg" alt=" Cuerda para Saltar">
+        <h2>Cuerda para Saltar</h2>
+        <p><strong>Q200</strong></p>
+        <p>Gritin Cuerda para Saltar, Comba Crossfit Profesional,Longitud Ajustable, Mango Antideslizante y Rodamientos Rápidos</p>
+        <button class="boton-compra" onclick="mostrarPopup('Gritin Cuerda para Saltar, Comba Crossfit Profesional')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://www.clubdelalucha.es/12469-large_default/guantes-de-boxeo-everlast-spark-negro.jpg" alt="Guantes de Boxeo">
+        <h2>Guantes de Boxeo</h2>
+        <p><strong>Q565</strong></p>
+        <p>Guantes de Boxeo Everlast Spark Negro 12 Oz</p>
+        <button class="boton-compra" onclick="mostrarPopup('Guantes de Boxeo Everlast Spark Negro 12 Oz')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://www.cdiscount.com/pdt2/4/9/0/1/700x700/son6955880321490/rw/songmics-set-de-2-halteres-courts-avec-disques-en.jpg" alt="Mancuernas">
+        <h2>Mancuernas</h2>
+        <p><strong>Q900</strong></p>
+        <p>Mancuernas de Hierro Fundido SONGMICS 30KG</p>
+        <button class="boton-compra" onclick="mostrarPopup('Mancuernas de Hierro Fundido SONGMICS 30KG')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://resources.claroshop.com/medios-plazavip/mkt/6482f1c91e81b_5png.jpg?scale=500&qlty=75" alt="Botella de Agua Deportiva">
+        <h2>Botella de Agua Deportiva</h2>
+        <p><strong>Q60</strong></p>
+        <p>Botella de Agua Deportiva 1L</p>
+        <button class="boton-compra" onclick="mostrarPopup('Botella de Agua Deportiva 1L')">Comprar</button>
+    </div>
+	
+	<div class="producto">
+        <img src="https://promart.vteximg.com.br/arquivos/ids/7690879-1000-1000/image-4dd1865689b64c4fb06d478aa9530a17.jpg?v=638369629393070000" alt="Rodilleras Deportivas">
+        <h2>Rodilleras Deportivas</h2>
+        <p><strong>Q130</strong></p>
+        <p>Rodillera Deportiva Premium Black Edition Talla S</p>
+        <button class="boton-compra" onclick="mostrarPopup('Rodillera Deportiva Premium Black Edition Talla S')">Comprar</button>
+    </div>
+
+
+</section>
+
+<div class="contacto">
+    <h3>Contáctanos</h3>
+    <a href="https://wa.me/50212345678" target="_blank">📱 WhatsApp</a>
+    <a href="mailto:ventas@domotronic.com">📧 Correo</a>
+    <a href="tel:+50212345678">📞 Llamada</a>
+</div>
+
+
+<div class="popup" id="popup">
+    <div class="popup-contenido">
+        <img src="https://i.imgur.com/U9dFIdh.png" alt="Éxito">
+        <h2>¡Compra realizada!</h2>
+        <p id="mensajeProducto"></p>
+        <button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+
+<script>
+    function mostrarPopup(producto) {
+        document.getElementById("mensajeProducto").innerText = "Has comprado: " + producto + ". Te contactaremos pronto.";
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
